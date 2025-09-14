@@ -43,7 +43,7 @@
             page = "Game";
         }}
     >
-        {game.name}
+        {game.ship.name}
     </button>
 
     <br />

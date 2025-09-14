@@ -1,7 +1,9 @@
+import { Ship } from "../Ship/Class";
+
 export class Game {
-    name: string;
+    ship: Ship;
 
     constructor(name: string) {
-        this.name = name;
+        this.ship = new Ship(name);
     };
 };

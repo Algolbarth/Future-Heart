@@ -8,7 +8,7 @@
 </script>
 
 {#if selected_game != undefined}
-    <GameView />
+    <GameView bind:game={selected_game} />
 {:else}
     <ErrorMessage message={"Aucune partie n'est sélectionnée sur la page Game"} />
 {/if}
