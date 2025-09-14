@@ -1,48 +1,48 @@
 <script lang="ts">
-    import type { Game } from "../Game/Class";
     import type { Region } from "../Region/Class";
-    import type { Planet } from "./Class";
+    import type { Planet } from "../Planet/Class";
+    import type { Zone } from "../Zone/Class";
 
     export let page: string;
-    export let game: Game;
     export let planet: Planet;
-    export let selected_region: Region | undefined;
+    export let region: Region;
+    export let selected_zone: Zone | undefined;
 </script>
 
 <button
     on:click={() => {
-        page = "Solar_System";
+        page = "Planet";
     }}
 >
-    {game.solar_system.name}
+    {planet.name}
 </button>
 
 <br />
 <br />
 
-{planet.name}
+{region.name}
 
 <br />
 <br />
 
-{#each planet.regions as region}
-    {#if selected_region == region}
+{#each region.zones as zone}
+    {#if selected_zone == zone}
         <button
             class="selected"
             on:click={() => {
-                page = "Region";
+                page = "Zone";
             }}
         >
-            {region.name}
+            {zone.name}
         </button>
     {:else}
         <button
             on:click={() => {
-                selected_region = region;
-                page = "Region";
+                selected_zone = zone;
+                page = "Zone";
             }}
         >
-            {region.name}
+            {zone.name}
         </button>
     {/if}
 

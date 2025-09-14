@@ -31,8 +31,8 @@
                 page = "Planet";
             }}
         >
-        {planet.name}
-    </button>
+            {planet.name}
+        </button>
     {:else}
         <button
             on:click={() => {
