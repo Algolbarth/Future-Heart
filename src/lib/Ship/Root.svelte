@@ -2,13 +2,14 @@
     import type { Game } from "../Game/Class";
 
     import ErrorMessage from "../System/ErrorMessage.svelte";
-    import GameView from "./View.svelte";
+    import ShipView from "./View.svelte";
 
+    export let page: string;
     export let selected_game: Game | undefined;
 </script>
 
 {#if selected_game != undefined}
-    <GameView bind:game={selected_game} />
+    <ShipView bind:page bind:game={selected_game} />
 {:else}
-    <ErrorMessage message={"Aucune partie n'est sélectionnée sur la page Game"} />
+    <ErrorMessage message={"Aucune partie n'est sélectionnée sur la page Ship"} />
 {/if}

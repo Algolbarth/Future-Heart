@@ -43,12 +43,20 @@ input:focus {
 }
 
 button:hover {
-  color: rgba(0, 150, 0, 0.87);;
+  color: rgba(0, 150, 0, 0.87);
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+button.selected {
+  color: rgba(255, 255, 0, 0.87);
+}
+
+button.selected:hover {
+  color: rgba(150, 150, 0, 0.87);
 }
 
 @media (prefers-color-scheme: light) {

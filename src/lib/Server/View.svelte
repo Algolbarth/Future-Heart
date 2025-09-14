@@ -40,7 +40,7 @@
     <button
         on:click={() => {
             selected_game = game;
-            page = "Game";
+            page = "Ship";
         }}
     >
         {game.ship.name}
