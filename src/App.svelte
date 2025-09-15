@@ -1,6 +1,6 @@
 <script lang="ts">
     import Root from "./lib/System/Root.svelte";
-    import { Server } from "./lib/Server/Server";
+    import { Server } from "./lib/Server/Class";
     import type { Game } from "./lib/Game/Class";
     import type { Planet } from "./lib/Planet/Class";
     import type { Region } from "./lib/Region/Class";

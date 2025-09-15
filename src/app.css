@@ -59,6 +59,17 @@ button.selected:hover {
   color: rgba(150, 150, 0, 0.87);
 }
 
+div.window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 8px;
+
+  background: #242424;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

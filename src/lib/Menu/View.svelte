@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Server } from "../Server/Server";
+    import type { Server } from "../Server/Class";
 
     export let page: string;
     export let servers: Server[];

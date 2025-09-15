@@ -5,6 +5,7 @@
     export let games: Game[];
 
     let ship_name: string = "";
+    let character_name: string = "";
 </script>
 
 <button
@@ -23,10 +24,15 @@
 <br />
 <br />
 
-{#if ship_name.length > 0}
+<input type="text" bind:value={character_name} placeholder="Nom du personnage" />
+
+<br />
+<br />
+
+{#if ship_name.length > 0 && character_name.length > 0}
     <button
         on:click={() => {
-            games.push(new Game(ship_name));
+            games.push(new Game(ship_name, character_name));
             page = "Server";
         }}
     >

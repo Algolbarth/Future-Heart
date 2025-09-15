@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Server } from "../Server/Server";
+    import type { Server } from "../Server/Class";
     import type { Game } from "../Game/Class";
     import type { Planet } from "../Planet/Class";
     import type { Region } from "../Region/Class";
@@ -11,6 +11,7 @@
     import ServerRoot from "../Server/Root.svelte";
     import NewGameRoot from "../Game/New/Root.svelte";
     import ShipRoot from "../Ship/Root.svelte";
+    import CrewRoot from "../Character/Crew/Root.svelte";
     import SolarSystemRoot from "../SolarSystem/Root.svelte";
     import PlanetRoot from "../Planet/Root.svelte";
     import RegionRoot from "../Region/Root.svelte";
@@ -35,6 +36,8 @@
     <NewGameRoot bind:page bind:selected_server />
 {:else if page == "Ship"}
     <ShipRoot bind:page bind:selected_game />
+{:else if page == "Crew"}
+    <CrewRoot bind:page bind:selected_game />
 {:else if page == "Solar_System"}
     <SolarSystemRoot bind:page bind:selected_game bind:selected_planet />
 {:else if page == "Planet"}

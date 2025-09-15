@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Game } from "../Game/Class";
-    import type { Server } from "../Server/Server";
+    import type { Server } from "./Class";
 
     export let page: string;
     export let view: Server | undefined;

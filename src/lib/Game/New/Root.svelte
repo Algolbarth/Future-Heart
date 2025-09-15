@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Server } from "../../Server/Server";
+    import type { Server } from "../../Server/Class";
 
     import ErrorMessage from "../../System/ErrorMessage.svelte";
     import NewGameView from "./View.svelte";

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Server } from "../Server";
+    import type { Server } from "../Class";
 
     import NewServerRoot from "./View.svelte";
 

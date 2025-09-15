@@ -12,6 +12,17 @@
 
 <button
     on:click={() => {
+        page = "Crew";
+    }}
+>
+    Voir l'équipage
+</button>
+
+<br />
+<br />
+
+<button
+    on:click={() => {
         page = "Solar_System";
     }}
 >
