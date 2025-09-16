@@ -2,7 +2,7 @@
     import type { Game } from "../../Game/Class";
     import { Character } from "../Class";
 
-    import CharacterRoot from '../Root.svelte';
+    import CharacterRoot from "../Root.svelte";
 
     export let page: string;
     export let game: Game;

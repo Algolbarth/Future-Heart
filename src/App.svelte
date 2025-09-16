@@ -19,4 +19,6 @@
     let selected_zone: Zone | undefined;
 </script>
 
-<Root bind:page bind:servers bind:selected_server bind:selected_game bind:selected_planet bind:selected_region bind:selected_zone />
+<div class="window">
+    <Root bind:page bind:servers bind:selected_server bind:selected_game bind:selected_planet bind:selected_region bind:selected_zone />
+</div>
