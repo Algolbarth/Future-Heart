@@ -1,11 +1,22 @@
 :root {
+  --background: rgb(36, 36, 36);
+  --infobar: rgb(18, 18, 18);
+  --taskbar: rgb(54, 54, 54);
+  --color: rgba(255, 255, 255, 0.87);
+  --button: rgba(0, 255, 0, 0.87);
+  --heart: rgba(255, 0, 0, 0.87);
+  --hovertask: rgb(108, 108, 108);
+  --task: rgb(72, 72, 72);
+  --important: rgba(0, 255, 255, 0.87);
+  --answer: rgba(255, 100, 0, 0.87);;
+
   font-family: Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color);
+  background-color: var(--background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,7 +40,7 @@ button {
   padding: 0;
   border: none;
   background: none;
-  color: rgba(0, 255, 0, 0.87);
+  color: var(--button);
   cursor: pointer;
 }
 
@@ -57,18 +68,6 @@ button.selected {
 
 button.selected:hover {
   color: rgba(150, 150, 0, 0.87);
-}
-
-div.window {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 98vw;
-  height: 98vh;
-
-  padding: 1vw;
-
-  background: #242424;
 }
 
 @media (prefers-color-scheme: light) {

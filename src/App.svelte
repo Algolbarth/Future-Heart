@@ -1,24 +1,44 @@
 <script lang="ts">
-    import Root from "./lib/System/Root.svelte";
-    import { Server } from "./lib/Server/Class";
-    import type { Game } from "./lib/Game/Class";
-    import type { Planet } from "./lib/Planet/Class";
-    import type { Region } from "./lib/Region/Class";
-    import type { Zone } from "./lib/Zone/Class";
+    import { Game } from "./lib/game/class";
+    import Infobar from "./lib/game/infobar.svelte";
+    import Step from "./lib/step/step.svelte";
+    import Taskbar from "./lib/game/taskbar.svelte";
+    import Register from "./lib/word/register.svelte";
+    import GameOver from "./lib/game/game-over.svelte";
 
-    let page: string = "Menu";
-
-    let servers: Server[] = [];
-
-    let selected_server: Server | undefined = undefined;
-
-    let selected_game: Game | undefined;
-
-    let selected_planet: Planet | undefined;
-    let selected_region: Region | undefined;
-    let selected_zone: Zone | undefined;
+    let game: Game = new Game();
 </script>
 
-<div class="window">
-    <Root bind:page bind:servers bind:selected_server bind:selected_game bind:selected_planet bind:selected_region bind:selected_zone />
+<div class="container-infobar">
+    <Infobar bind:game />
+
+    <div class="container-taskbar">
+        {#if game.page == "step"}
+            <Step bind:game />
+        {:else if game.page == "register"}
+            <Register bind:game />
+        {:else if game.page == "game-over"}
+            <GameOver bind:game />
+        {/if}
+
+        <Taskbar bind:game />
+    </div>
 </div>
+
+<style>
+    div.container-infobar {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        display: grid;
+        grid-template-rows: 1fr 9fr;
+    }
+
+    div.container-taskbar {
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+    }
+</style>
